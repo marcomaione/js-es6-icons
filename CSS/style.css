@@ -28,12 +28,13 @@ html {
 #text {
     color: white;
     font-size: 20px;
+    margin-right: 10px;
 }
 
 /*main*/
 
 main {
-    background-color: lightgray;
+    background-color: rgb(204, 210, 216);
     min-height: 100vh;
 }
 
