@@ -141,31 +141,31 @@ selector.addEventListener('change', function() {
 
 function drawIcons(container, icons) {
 
+    //bonus-1
+
+    //genero colore random
+    
+    let lettereN = '0123456789ABCDEF';
+    let colore = '#';
+    
+    for (i = 0; i < 6; i++) {
+        colore = colore + lettereN[Math.floor(Math.random() * 16)];
+    }
+
+    console.log(colore);
+
     let content = '';
 
     icons.forEach(oggetto => {
 
         content += `<div class="icon">
-        <i style="color: ${oggetto.color}" class="${oggetto.family} ${oggetto.prefix}${oggetto.name}"></i>
+        <i style="color: ${colore}" class="${oggetto.family} ${oggetto.prefix}${oggetto.name}"></i>
         <div class="icon-text">${oggetto.name}</div>
     </div>`;
     });
 
     container.innerHTML = content;
 
+
 }
-
-//genero colori random
-
-let lettere = '0123456789ABCDEF';
-let colore = '#';
-
-function coloreRandom() {
-
-    for (let i = 0; i < 6; i++) {
-      colore += lettere[Math.floor(Math.random() * 16)];
-    }
-    return colore;
-  }
   
-// non riesco ad assegnare il colore 
