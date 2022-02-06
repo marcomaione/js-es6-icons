@@ -139,11 +139,6 @@ selector.addEventListener('change', function() {
     }
 });
 
-
-
-
-
-
 function drawIcons(container, icons) {
 
     let content = '';
@@ -151,7 +146,7 @@ function drawIcons(container, icons) {
     icons.forEach(oggetto => {
 
         content += `<div class="icon">
-        <i style="color: ${oggetto.color};" class="${oggetto.family} ${oggetto.prefix}${oggetto.name}"></i>
+        <i style="color: ${oggetto.color}" class="${oggetto.family} ${oggetto.prefix}${oggetto.name}"></i>
         <div class="icon-text">${oggetto.name}</div>
     </div>`;
     });
@@ -159,3 +154,18 @@ function drawIcons(container, icons) {
     container.innerHTML = content;
 
 }
+
+//genero colori random
+
+let lettere = '0123456789ABCDEF';
+let colore = '#';
+
+function coloreRandom() {
+
+    for (let i = 0; i < 6; i++) {
+      colore += lettere[Math.floor(Math.random() * 16)];
+    }
+    return colore;
+  }
+  
+// non riesco ad assegnare il colore 
