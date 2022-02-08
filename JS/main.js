@@ -168,4 +168,31 @@ function drawIcons(container, icons) {
 
 
 }
+
+function createSelection (container, array){
+
+    const types =['all'];
+    
+    array.forEach(value =>{
+    
+        if(!types.includes(value.type)){
+    
+            types.push(value.type);
+    
+        }
+    
+    });
+    
+    // bonus 2 
+
+    types.forEach(value =>{
+    
+	    let option = `<option value="${value}">${value}</option>`;
+    
+        console.log(option);
+    
+        container.innerHTML += option;
+    });
+
+}
   
