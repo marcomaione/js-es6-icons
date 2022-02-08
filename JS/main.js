@@ -169,6 +169,7 @@ function drawIcons(container, icons) {
 
 }
 
+// bonus 2
 function createSelection (container, array){
 
     const types =['all'];
@@ -183,7 +184,6 @@ function createSelection (container, array){
     
     });
     
-    // bonus 2 
 
     types.forEach(value =>{
     
